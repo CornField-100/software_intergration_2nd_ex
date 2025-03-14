@@ -1,0 +1,34 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "cross-env NODE_ENV=dev node server.js",
+    "prod": "cross-env NODE_ENV=prod node server.js",
+    "release": "cross-env NODE_ENV=release node server.js",
+    "test:watch": "cross-env NODE_ENV=dev mocha --watch ./src/tests/*.spec.js",
+    "test": "cross-env NODE_ENV=dev mocha ./src/tests/*.spec.js --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^6.2.6"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
+    "rewire": "^6.0.0",
+    "sinon": "^13.0.2",
+    "sinon-chai": "^3.7.0",
+    "supertest": "^6.3.4"
+  }
+}
