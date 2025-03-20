@@ -9,7 +9,8 @@
     "prod": "cross-env NODE_ENV=prod node server.js",
     "release": "cross-env NODE_ENV=release node server.js",
     "test:watch": "cross-env NODE_ENV=dev mocha --watch ./src/tests/*.spec.js",
-    "test": "cross-env NODE_ENV=dev mocha ./src/tests/*.spec.js --exit"
+    "test": "cross-env NODE_ENV=dev mocha ./src/tests/*.spec.js --exit",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "chai-as-promised": "^7.1.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
+    "husky": "^8.0.3",
     "mocha": "^9.2.2",
     "nyc": "^15.1.0",
     "rewire": "^6.0.0",

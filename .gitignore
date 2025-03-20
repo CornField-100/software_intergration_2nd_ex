@@ -3,3 +3,6 @@ node_modules/
 
 # Ignore environment-specific configuration files
 .env
+
+# Husky config files (optional, but often ignored)
+.husky/
