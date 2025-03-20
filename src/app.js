@@ -2,7 +2,6 @@ const config =  require('../config');
 const express = require('express');
 const mongoose = require('mongoose');
 const noteRoutes = require('./routes/note.routes');
-const healthRoutes = require('./routes/health.routes');
 const bodyParser = require("body-parser");
 const cors = require("cors");
 

@@ -15,11 +15,11 @@ router.post('/notes', async (req, res) => {
          
        });
     } catch (error) {
-        res.json({
+        return res.status(500).json({
             item: null,
             status: err.code || err.statusCode || 500,
             message:
-              err.message || "Something went wrong while reading item from DB!",
+              error.message || "Something went wrong while reading item from DB!",
           });
     }
 });
@@ -35,11 +35,11 @@ router.get('/notes', async (req, res) => {
         
         });
     } catch (error) {
-        res.json({
+        return res.status(500).json({
             item: null,
-            status: err.code || err.statusCode || 500,
+            status: error.code || error.statusCode || 500,
             message:
-              err.message || "Something went wrong while reading item from DB!",
+              error.message || "Something went wrong while reading item from DB!",
           });
     }
 });
@@ -59,11 +59,11 @@ router.get('/notes/:id', async (req, res) => {
         
         });
     } catch (error) {
-        res.json({
+        return res.status(500).json({
             item: null,
-            status: err.code || err.statusCode || 500,
+            status: error.code || error.statusCode || 500,
             message:
-              err.message || "Something went wrong while reading item from DB!",
+              error.message || "Something went wrong while reading item from DB!",
           });
     }
 });
@@ -82,11 +82,11 @@ router.put('/notes/:id', async (req, res) => {
             note,
             status: 'success'});
     } catch (error) {
-        res.json({
+        return res.status(500).json({
             item: null,
-            status: err.code || err.statusCode || 500,
+            status: error.code || error.statusCode || 500,
             message:
-              err.message || "Something went wrong while reading item from DB!",
+              error.message || "Something went wrong while reading item from DB!",
           });
     }
 });
@@ -101,11 +101,11 @@ router.delete('/notes/:id', async (req, res) => {
         }
         res.json({ message: 'Note deleted successfully', status: 'success' });
     } catch (error) {
-        res.json({
+        return res.status(500).json({
             item: null,
-            status: err.code || err.statusCode || 500,
+            status: error.code || error.statusCode || 500,
             message:
-              err.message || "Something went wrong while reading item from DB!",
+              error.message || "Something went wrong while reading item from DB!",
           });
     }
 });
